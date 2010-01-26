@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus type="test">
+	<genre label="classic">
+		<track file="123.mp3" />
+	</genre>
+	<genre label="country">
+		<track file="123.mp3" />
+		<sub-genre label="rock">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="texas">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="blues">
+			<track file="123.mp3" />
+		</sub-genre>
+	</genre>
+	<genre label="danse">
+		<sub-genre label="funk">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="pop">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="techno">
+			<track file="123.mp3" />
+		</sub-genre>
+	</genre>
+	<genre label="gothic/industrial">
+		<track file="123.mp3" />
+	</genre>
+	<genre label="hip hop">
+		<sub-genre label="r&amp;b">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="rap">
+			<track file="123.mp3" />
+		</sub-genre>
+	</genre>
+	<genre label="jazz">
+		<track file="123.mp3" />
+		<sub-genre label="acid">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="blues">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="classic">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="funk">
+			<track file="123.mp3" />
+		</sub-genre>
+	</genre>
+	<genre label="rock">
+		<track file="123.mp3" />
+		<sub-genre label="alternative">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="hard">
+			<track file="123.mp3" />
+		</sub-genre>
+		<sub-genre label="punk">
+			<track file="123.mp3" />
+		</sub-genre>
+	</genre>
+	<genre label="samba">
+		<track file="123.mp3" />
+	</genre>
+</corpus>
