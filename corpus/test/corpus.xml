@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <corpus type="test">
 	<genre label="classic">
-		<track file="123.mp3" />
+		<track file="testU9IS.mp3" />
+		<track file="test2USO.mp3" />
+		<track file="testFRHK.mp3" />
 	</genre>
 	<genre label="country">
 		<track file="123.mp3" />
@@ -17,13 +19,14 @@
 	</genre>
 	<genre label="danse">
 		<sub-genre label="funk">
-			<track file="123.mp3" />
+			<track file="testHU8L.mp3" />
 		</sub-genre>
 		<sub-genre label="pop">
-			<track file="123.mp3" />
+			<track file="testHAW2.mp3" />
+			<track file="test325V.mp3" />
 		</sub-genre>
 		<sub-genre label="techno">
-			<track file="123.mp3" />
+			<track file="testQVGP.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="gothic/industrial">
@@ -34,10 +37,12 @@
 	</genre>
 	<genre label="hip hop">
 		<sub-genre label="r&amp;b">
-			<track file="123.mp3" />
+			<track file="test1YET.mp3" />
+			<track file="testAECK.mp3" />
 		</sub-genre>
-		<sub-genre label="rap">
-			<track file="123.mp3" />
+		<sub-genre label="beats">
+			<track file="testMWBC.mp3" />
+			<track file="testJQM6.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="jazz">
@@ -68,6 +73,7 @@
 		</sub-genre>
 	</genre>
 	<genre label="samba">
-		<track file="123.mp3" />
+		<track file="testYVN2.mp3" />
+		<track file="testVPY5.mp3" />
 	</genre>
 </corpus>

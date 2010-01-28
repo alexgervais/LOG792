@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <corpus type="training">
 	<genre label="classic">
-		<track file="123.mp3" />
+		<track file="trai70MS.mp3" />
+		<track file="traiFK5E.mp3" />
+		<track file="traiEPRT.mp3" />
+		<track file="traiO5FA.mp3" />
+		<track file="traiZNO3.mp3" />
+		<track file="traiMQZX.mp3" />
+		<track file="traiSRVB.mp3" />
 	</genre>
 	<genre label="country">
 		<track file="123.mp3" />
@@ -17,13 +23,20 @@
 	</genre>
 	<genre label="danse">
 		<sub-genre label="funk">
-			<track file="123.mp3" />
+			<track file="traiP7RC.mp3" />
+			<track file="traiYR18.mp3" />
+			<track file="traiBYQ4.mp3" />
 		</sub-genre>
 		<sub-genre label="pop">
-			<track file="123.mp3" />
+			<track file="traiWWNN.mp3" />
+			<track file="traiI3KW.mp3" />
+			<track file="trai5XVR.mp3" />
+			<track file="trai6CL4.mp3" />
 		</sub-genre>
 		<sub-genre label="techno">
-			<track file="123.mp3" />
+			<track file="trai31H6.mp3" />
+			<track file="traiYZEF.mp3" />
+			<track file="traiDHFN.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="gothic/industrial">
@@ -42,10 +55,16 @@
 	</genre>
 	<genre label="hip hop">
 		<sub-genre label="r&amp;b">
-			<track file="123.mp3" />
+			<track file="traiLUCC.mp3" />
+			<track file="trai6S9L.mp3" />
+			<track file="trai3LTP.mp3" />
+			<track file="traiV19T.mp3" />
 		</sub-genre>
-		<sub-genre label="rap">
-			<track file="123.mp3" />
+		<sub-genre label="beats">
+			<track file="traiNX34.mp3" />
+			<track file="trai9VZD.mp3" />
+			<track file="traiIBXU.mp3" />
+			<track file="traiAQN7.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="jazz">
@@ -76,6 +95,11 @@
 		</sub-genre>
 	</genre>
 	<genre label="samba">
-		<track file="123.mp3" />
+		<track file="traiSAID.mp3" />
+		<track file="trai0US0.mp3" />
+		<track file="traiCM1S.mp3" />
+		<track file="traiZFBW.mp3" />
+		<track file="traiXKY1.mp3" />
+		<track file="traiQO4J.mp3" />
 	</genre>
 </corpus>
