@@ -10,15 +10,21 @@
 		<track file="traiSRVB.mp3" />
 	</genre>
 	<genre label="country">
-		<track file="123.mp3" />
+		<track file="traiL2P9.mp3" />
+		<track file="trai548X.mp3" />
+		<track file="traiUM85.mp3" />
 		<sub-genre label="rock">
-			<track file="123.mp3" />
+			<track file="traiTYJ1.mp3" />
+			<track file="trai1I2O.mp3" />
+			<track file="traiR257.mp3" />
 		</sub-genre>
 		<sub-genre label="texas">
-			<track file="123.mp3" />
+			<track file="trai1N3G.mp3" />
+			<track file="traiOGEA.mp3" />
 		</sub-genre>
 		<sub-genre label="blues">
-			<track file="123.mp3" />
+			<track file="traiMK0P.mp3" />
+			<track file="traiW0Y6.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="danse">
@@ -68,30 +74,44 @@
 		</sub-genre>
 	</genre>
 	<genre label="jazz">
-		<track file="123.mp3" />
+		<track file="traiRQI8.mp3" />
+		<track file="traiCOFH.mp3" />
+		<track file="traiR7FP.mp3" />
 		<sub-genre label="acid">
-			<track file="123.mp3" />
+			<track file="traiZRPL.mp3" />
+			<track file="traiYWBR.mp3" />
 		</sub-genre>
 		<sub-genre label="blues">
-			<track file="123.mp3" />
+			<track file="trai8C9H.mp3" />
+			<track file="traiJU89.mp3" />
 		</sub-genre>
 		<sub-genre label="classic">
-			<track file="123.mp3" />
+			<track file="traiGNJ4.mp3" />
+			<track file="traiF7T0.mp3" />
+			<track file="traiER5J.mp3" />
 		</sub-genre>
 		<sub-genre label="funk">
-			<track file="123.mp3" />
+			<track file="trai0Z2S.mp3" />
+			<track file="traiLXZ1.mp3" />
+			<track file="traiNSDM.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="rock">
-		<track file="123.mp3" />
+		<track file="traiIIXY.mp3" />
+		<track file="trai3QU7.mp3" />
+		<track file="trai5L8S.mp3" />
 		<sub-genre label="alternative">
-			<track file="123.mp3" />
+			<track file="traiD6SO.mp3" />
+			<track file="traiPNRG.mp3" />
 		</sub-genre>
 		<sub-genre label="hard">
-			<track file="123.mp3" />
+			<track file="traiCH2K.mp3" />
+			<track file="traiALOQ.mp3" />
 		</sub-genre>
 		<sub-genre label="punk">
-			<track file="123.mp3" />
+			<track file="traiK1L7.mp3" />
+			<track file="traiSMV3.mp3" />
+			<track file="traiWTLZ.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="samba">

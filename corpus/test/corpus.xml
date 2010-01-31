@@ -6,15 +6,16 @@
 		<track file="testFRHK.mp3" />
 	</genre>
 	<genre label="country">
-		<track file="123.mp3" />
+		<track file="testOZ24.mp3" />
 		<sub-genre label="rock">
-			<track file="123.mp3" />
+			<track file="testAXZD.mp3" />
+			<track file="testFF66.mp3" />
 		</sub-genre>
 		<sub-genre label="texas">
-			<track file="123.mp3" />
+			<track file="testX0AH.mp3" />
 		</sub-genre>
 		<sub-genre label="blues">
-			<track file="123.mp3" />
+			<track file="testV5WM.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="danse">
@@ -30,10 +31,10 @@
 		</sub-genre>
 	</genre>
 	<genre label="gothic/industrial">
-		<track file="traiHGJ9.mp3" />
-		<track file="trai49U3.mp3" />
-		<track file="trai2EGI.mp3" />
-		<track file="traiCU4Z.mp3" />
+		<track file="testHGJ9.mp3" />
+		<track file="test49U3.mp3" />
+		<track file="test2EGI.mp3" />
+		<track file="testCU4Z.mp3" />
 	</genre>
 	<genre label="hip hop">
 		<sub-genre label="r&amp;b">
@@ -46,30 +47,31 @@
 		</sub-genre>
 	</genre>
 	<genre label="jazz">
-		<track file="123.mp3" />
+		<track file="testL1XI.mp3" />
 		<sub-genre label="acid">
-			<track file="123.mp3" />
+			<track file="testJ6JN.mp3" />
 		</sub-genre>
 		<sub-genre label="blues">
-			<track file="123.mp3" />
+			<track file="testTM7E.mp3" />
 		</sub-genre>
 		<sub-genre label="classic">
-			<track file="123.mp3" />
+			<track file="test16R0.mp3" />
 		</sub-genre>
 		<sub-genre label="funk">
-			<track file="123.mp3" />
+			<track file="test0BDF.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="rock">
-		<track file="123.mp3" />
+		<track file="test5LK3.mp3" />
+		<track file="testQ2TW.mp3" />
 		<sub-genre label="alternative">
-			<track file="123.mp3" />
+			<track file="testDW3Z.mp3" />
 		</sub-genre>
 		<sub-genre label="hard">
-			<track file="123.mp3" />
+			<track file="testCAQ5.mp3" />
 		</sub-genre>
 		<sub-genre label="punk">
-			<track file="123.mp3" />
+			<track file="testX8NE.mp3" />
 		</sub-genre>
 	</genre>
 	<genre label="samba">
