@@ -1,0 +1,13 @@
+Plusieurs « experts » pourront évaluer la probabilité d'une piste audio d'appartenir à un certain genre audio.
+
+Chaque « expert » a un poids lui étant associé. Le poids optimal pour chacun des « experts » sera fixé durant la phase de tests.
+
+Chaque « expert » évalue de façon différente la probabilité. (HMM/GMM, Mixture de gaussiennes, SVM, KNN, etc.)
+
+
+Pseudo-code :
+
+Pour tous les experts (1 à N)
+	Classe_expert_N = argmax Probabilité(classe | audio)
+Fin
+Classe = argmax Probabilité(Classe_expert_N | poids_experts)

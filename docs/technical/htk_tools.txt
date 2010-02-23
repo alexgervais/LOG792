@@ -1,0 +1,26 @@
+Data manipulation
+	- HCopy *
+	- HQuant
+	- HLEd
+	- HHEd
+	- HDMan *
+	- HBuild
+
+Visualisation
+	- HSLab
+	- HList *
+	- HSGen
+
+Training
+	- HCompV *
+	- HInit *
+	- HRest *
+	- HERest *
+	- HEAdapt
+	- HSmooth
+
+Recongnition
+	- HLStats *
+	- HParse
+	- HVite *
+	- HResults *
