@@ -14,7 +14,11 @@ public class Genre implements Comparable<Genre> {
     private String label = null;
 
     public Genre(String label) {
-        this.label = label;
+        label = label.replace(" ", "");
+        label = label.replace("/", "");
+        label = label.replace("\\", "");
+        this.label = label.toUpperCase();
+        
     }
 
     public String getLabel() {

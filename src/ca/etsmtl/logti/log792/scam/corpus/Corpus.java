@@ -14,6 +14,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import ca.etsmtl.logti.log792.scam.exception.ScamException;
+
 public class Corpus {
     
     private final static Logger logger = Logger.getLogger(Corpus.class);
@@ -29,12 +31,22 @@ public class Corpus {
     private String path = null;
     private String name = null;
     private Set<Track> tracks = new TreeSet<Track>();
+    private String parent = null;
     
     public Corpus(String path, String name) {
         this.path = path;
         this.name = name;
        
         load();
+    }
+    
+    private Corpus(String path, String name, boolean reload) {
+        this.path = path;
+        this.name = name;
+       
+        if (reload) {
+            load();
+        }
     }
     
     private void load() {
@@ -83,20 +95,34 @@ public class Corpus {
         tracks.add(track);
     }
     
+    private void setParent(String parent) {
+        this.parent = parent;
+    }
+    
     public Corpus getCorpusByGenre(Genre genre) {
-        Corpus corpus = new Corpus(null, null);
-        Iterator<Track> it = getIterator();
+        Corpus corpus = new Corpus(this.getPath(), this.getName() + "." + genre.getLabel(), false);
+        Iterator<Track> it = tracks.iterator();
         while (it.hasNext()) {
             Track track = it.next();
             if (track.getAcutalGenre().getLabel().equalsIgnoreCase(genre.getLabel())) {
-                corpus.addTrack(track);
+                try {
+                    if (track.getAcutalGenre().getSubGenre().size() > 0) {
+                        Genre subGenre = track.getAcutalGenre().getSubGenre().get(0);
+                        Track subCorpusTrack = new Track(track.getOriginalFile(), subGenre);
+                        corpus.addTrack(subCorpusTrack);
+                    }
+                } catch (ScamException ex) {
+                    logger.error("Error rebuilding track for sub-corpus");
+                }
             }
         }
+        corpus.setParent(genre.getLabel());
+        logger.debug(corpus.tracks.size() + " tracks in sub-corpus");
         return corpus;
     }
     
-    public Iterator<Track> getIterator() {
-        return tracks.iterator();
+    public Set<Track> getTracks() {
+        return tracks;
     }
     
     public String getPath() {
@@ -105,5 +131,9 @@ public class Corpus {
     
     public String getName() {
         return name;
+    }
+    
+    public String getParent() {
+        return parent;
     }
 }

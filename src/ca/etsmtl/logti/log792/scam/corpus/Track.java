@@ -42,6 +42,10 @@ public class Track implements Comparable<Track> {
     public File getOriginalFile() {
         return originalFile;
     }
+    
+    public File getNormalizedAudioFile() {
+        return audioFile;
+    }
 
     public File getRawMFCCFile() {
         return rawMFCC;

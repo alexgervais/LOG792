@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import ca.etsmtl.logti.log792.scam.command.Command;
 import ca.etsmtl.logti.log792.scam.command.impl.CommandImpl;
 import ca.etsmtl.logti.log792.scam.config.Config;
-import ca.etsmtl.logti.log792.scam.corpus.Track;
 import ca.etsmtl.logti.log792.scam.exception.ScamException;
 
 public class AudioTransform {
