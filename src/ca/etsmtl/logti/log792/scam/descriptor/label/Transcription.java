@@ -20,6 +20,7 @@ public class Transcription {
     
     public File getFile() {
         return labelFile;
+        
     }
 
     public File getAlignedFile() {
@@ -32,9 +33,10 @@ public class Transcription {
 
     protected void setFile(File labelFile) {
         this.labelFile = labelFile;
+        this.setAlignedFile(new File(labelFile.getParent(), "aligned." + labelFile.getName()));
     }
     
-    public void setAlignedFile(File alignedLabelFile) {
+    protected void setAlignedFile(File alignedLabelFile) {
         this.alignedLabelFile = alignedLabelFile;
     }
     

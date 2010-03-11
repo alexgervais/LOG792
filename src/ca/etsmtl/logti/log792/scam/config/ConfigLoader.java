@@ -37,6 +37,7 @@ public class ConfigLoader {
             
             Config.getInstance().setHtk(properties.getProperty("htk.path"));
             Config.getInstance().setHtkConfiguration(properties.getProperty("htk.conf"));
+            Config.getInstance().setHmmPrototype(properties.getProperty("hmm.prototype"));
             
             Config.getInstance().setAudioFolder(new File(Config.getInstance().getWorkPath(), AUDIO_FOLDER));
             Config.getInstance().setMfccRawFolder(new File(Config.getInstance().getWorkPath(), MFCC_RAW_FOLDER));

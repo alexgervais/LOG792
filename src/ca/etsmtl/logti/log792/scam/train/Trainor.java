@@ -40,10 +40,8 @@ public class Trainor {
         HMMBuilder hmmBuilder = new HMMBuilder(corpus, dictionary, labels);
         logger.info("Building HMM prototype");
         HMM hmm = hmmBuilder.buildPrototype();
-        for (int i = 0; i < HMM_ITERATIONS; i++) {
-            logger.info("Refining HMM prototype... " + (i + 1) + " of " + HMM_ITERATIONS);
-            hmm.train(i);
-        }
+        logger.info("Refining HMM...");
+        hmm.train();
         this.hmm = hmm;
     }
 

@@ -13,6 +13,7 @@ public class Config {
     private String sox = null;
     private String htk = null;
     private String htkConfiguration = null;
+    private String hmmPrototype = null;
     
     private File audioFolder = null;
     private File mfccRawFolder = null;
@@ -55,6 +56,10 @@ public class Config {
 
     public String getHtkConfiguration() {
         return htkConfiguration;
+    }
+    
+    public String getHmmPrototype() {
+        return hmmPrototype;
     }
 
     public File getAudioFolder() {
@@ -107,6 +112,10 @@ public class Config {
 
     protected void setHtkConfiguration(String htkConfiguration) {
         this.htkConfiguration = htkConfiguration;
+    }
+    
+    protected void setHmmPrototype(String hmmPrototype) {
+        this.hmmPrototype = hmmPrototype;
     }
 
     protected void setAudioFolder(File audioFolder) {
