@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
-
 public class Genre implements Comparable<Genre> {
-
-    private final static Logger logger = Logger.getLogger(Genre.class);
 
     private List<Genre> subGenre = new ArrayList<Genre>();
     private String label = null;

@@ -10,10 +10,13 @@ public class Config {
     private String testCorpusPath = null;
     private String workPath = null;
     
+    private int hierarchyLevel;
+    
     private String sox = null;
     private String htk = null;
-    private String htkConfiguration = null;
-    private String hmmPrototype = null;
+    
+    private File htkConfiguration = null;
+    private File hmmPrototype = null;
     
     private File audioFolder = null;
     private File mfccRawFolder = null;
@@ -21,6 +24,26 @@ public class Config {
     private File hmmFolder = null;
     private File dictionaryFolder = null;
     private File transcriptionFolder = null;
+
+    private int numceps;
+    private boolean energy;
+    private boolean delta;
+    private boolean zero;
+    private boolean acceleration;
+
+    private boolean duple;
+    private boolean triple;
+    private boolean quadruple;
+    
+    private boolean hmmMultipleEvaluations;
+    
+    private int mixtures;
+    
+    private static final String MFCC = "MFCC";
+    private static final String ENERGY = "_E";
+    private static final String DELTA = "_D";
+    private static final String ZERO = "_0";
+    private static final String ACCELERATION = "_A";
 
     private Config() {
         
@@ -45,6 +68,10 @@ public class Config {
     public String getWorkPath() {
         return workPath;
     }
+    
+    public int getHierarchyLevel() {
+        return hierarchyLevel;
+    }
 
     public String getSox() {
         return sox;
@@ -54,11 +81,11 @@ public class Config {
         return htk;
     }
 
-    public String getHtkConfiguration() {
+    public File getHtkConfiguration() {
         return htkConfiguration;
     }
     
-    public String getHmmPrototype() {
+    public File getHmmPrototype() {
         return hmmPrototype;
     }
 
@@ -86,6 +113,111 @@ public class Config {
         return transcriptionFolder;
     }
 
+    public int getNumceps() {
+        return numceps;
+    }
+
+    public boolean isEnergy() {
+        return energy;
+    }
+
+    public boolean isDelta() {
+        return delta;
+    }
+
+    public boolean isZero() {
+        return zero;
+    }
+
+    public boolean isAcceleration() {
+        return acceleration;
+    }
+
+    public boolean isDuple() {
+        return duple;
+    }
+
+    public boolean isTriple() {
+        return triple;
+    }
+
+    public boolean isQuadruple() {
+        return quadruple;
+    }
+    
+    public boolean isHmmMultipleEvaluations() {
+        return hmmMultipleEvaluations;
+    }
+
+    public int getMixtures() {
+        return mixtures;
+    }
+
+    public int getVectorSize() {
+        int totalSize = 0;
+        int baseSize = getNumceps();
+        
+        if (isEnergy()) {
+            baseSize++;
+        }
+        if (isZero()) {
+            baseSize++;
+        }
+        totalSize = baseSize;
+        if (isDelta()) {
+            totalSize += baseSize;
+        }
+        if (isAcceleration()) {
+            totalSize += baseSize;
+        }
+        return totalSize;
+    }
+    
+    public String getMfccType() {
+        String type = MFCC;
+        if (isDelta()) {
+            type += DELTA;
+        }
+        if (isEnergy()) {
+            type += ENERGY;
+        }
+        if (isZero()) {
+            type += ZERO;
+        }
+        if (isAcceleration()) {
+            type += ACCELERATION;
+        }
+        return type;
+    }
+    
+    public int getHmmStateCount() {
+        int totalStates = 2;
+        if (isDuple()) {
+            totalStates += 2;
+        }
+        if (isTriple()) {
+            totalStates += 3;
+        }
+        if (isQuadruple()) {
+            totalStates += 4;
+        }
+        return totalStates;
+    }
+    
+    public int getSignaturesCount() {
+        int totalSignatures = 0;
+        if (isDuple()) {
+            totalSignatures++;
+        }
+        if (isTriple()) {
+            totalSignatures++;
+        }
+        if (isQuadruple()) {
+            totalSignatures++;
+        }
+        return totalSignatures;
+    }
+
     protected static void setInstance(Config instance) {
         Config.instance = instance;
     }
@@ -102,6 +234,10 @@ public class Config {
         this.workPath = workPath;
     }
 
+    protected void setHierarchyLevel(int hierarchyLevel) {
+        this.hierarchyLevel = hierarchyLevel;
+    }
+
     protected void setSox(String sox) {
         this.sox = sox;
     }
@@ -110,11 +246,11 @@ public class Config {
         this.htk = htk;
     }
 
-    protected void setHtkConfiguration(String htkConfiguration) {
+    protected void setHtkConfiguration(File htkConfiguration) {
         this.htkConfiguration = htkConfiguration;
     }
     
-    protected void setHmmPrototype(String hmmPrototype) {
+    protected void setHmmPrototype(File hmmPrototype) {
         this.hmmPrototype = hmmPrototype;
     }
 
@@ -142,5 +278,48 @@ public class Config {
         this.transcriptionFolder = transcriptionFolder;
     }
 
+    protected void setMfccNumceps(int numceps) {
+        this.numceps = numceps;
+    }
+
+    protected void setMfccEnergy(boolean energy) {
+        this.energy = energy;
+    }
+
+    protected void setMfccDelta(boolean delta) {
+        this.delta = delta;
+    }
+
+    protected void setMfcc0(boolean zero) {
+        this.zero = zero;
+    }
+
+    protected void setMfccAcceleration(boolean acceleration) {
+        this.acceleration = acceleration;
+        
+        if (this.acceleration) {
+            this.delta = true;
+        }
+    }
+
+    protected void setHmmDuple(boolean duple) {
+        this.duple = duple;
+    }
+
+    protected void setHmmTriple(boolean triple) {
+        this.triple = triple;
+    }
+
+    protected void setHmmQuadruple(boolean quadruple) {
+        this.quadruple = quadruple;
+    }
+    
+    protected void setHmmMultipleEvaluations(boolean hmmMultipleEvaluations) {
+        this.hmmMultipleEvaluations = hmmMultipleEvaluations;
+    }
+
+    protected void setMixtures(int mixtures) {
+        this.mixtures = mixtures;
+    }
     
 }

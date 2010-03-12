@@ -14,6 +14,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import ca.etsmtl.logti.log792.scam.descriptor.label.AudioLabler;
+import ca.etsmtl.logti.log792.scam.descriptor.label.Transcription;
 import ca.etsmtl.logti.log792.scam.exception.ScamException;
 
 public class Corpus {
@@ -30,6 +32,7 @@ public class Corpus {
     
     private String path = null;
     private String name = null;
+    private Transcription labels = null;
     private Set<Track> tracks = new TreeSet<Track>();
     private String parent = null;
     
@@ -47,6 +50,11 @@ public class Corpus {
         if (reload) {
             load();
         }
+    }
+    
+    public void loadTranscriptions() {
+        AudioLabler audioLabler = new AudioLabler(this);
+        this.labels = audioLabler.build();
     }
     
     private void load() {
@@ -135,5 +143,9 @@ public class Corpus {
     
     public String getParent() {
         return parent;
+    }
+    
+    public Transcription getLabels() {
+        return labels;
     }
 }

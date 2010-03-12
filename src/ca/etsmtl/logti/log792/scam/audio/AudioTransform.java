@@ -2,8 +2,6 @@ package ca.etsmtl.logti.log792.scam.audio;
 
 import java.io.File;
 
-import org.apache.log4j.Logger;
-
 import ca.etsmtl.logti.log792.scam.command.Command;
 import ca.etsmtl.logti.log792.scam.command.impl.CommandImpl;
 import ca.etsmtl.logti.log792.scam.config.Config;
@@ -11,8 +9,6 @@ import ca.etsmtl.logti.log792.scam.exception.ScamException;
 
 public class AudioTransform {
     
-    private final static Logger logger = Logger.getLogger(AudioTransform.class);
-
     private File input;
     
     public AudioTransform(File audioInput) {

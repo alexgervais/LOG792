@@ -10,36 +10,31 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-
 import ca.etsmtl.logti.log792.scam.command.Command;
 import ca.etsmtl.logti.log792.scam.command.impl.CommandImpl;
 import ca.etsmtl.logti.log792.scam.config.Config;
 import ca.etsmtl.logti.log792.scam.corpus.Corpus;
 import ca.etsmtl.logti.log792.scam.corpus.Track;
 import ca.etsmtl.logti.log792.scam.descriptor.dictionary.Dictionary;
-import ca.etsmtl.logti.log792.scam.descriptor.label.Transcription;
+import ca.etsmtl.logti.log792.scam.descriptor.label.AudioLabler;
 import ca.etsmtl.logti.log792.scam.exception.ScamException;
 
 public class HMM {
-
-    private final static Logger logger = Logger.getLogger(HMM.class);
     
     private File hmmFile;
     private Map<String, File> hmmFiles;
     private Corpus corpus;
     private Dictionary dictionary;
-    private Transcription transcription;
+    private File hmmList;
     
-    protected HMM(Corpus corpus, Dictionary dictionary, Transcription transcription) {
+    protected HMM(Corpus corpus, Dictionary dictionary) {
         this.corpus = corpus;
         this.dictionary = dictionary;
-        this.transcription = transcription;
         hmmFiles = new HashMap<String, File>();
         
         Iterator<String> itDictionaryEntries = dictionary.getEntries().iterator();
         while (itDictionaryEntries.hasNext()) {
-            hmmFiles.put(itDictionaryEntries.next(), new File(Config.getInstance().getHmmPrototype()));
+            hmmFiles.put(itDictionaryEntries.next(), Config.getInstance().getHmmPrototype());
         }
     }
     
@@ -47,6 +42,9 @@ public class HMM {
         return hmmFile;
     }
     
+    public File getListFile() {
+        return hmmList;
+    }
     
     public void train() throws ScamException {
         Iterator<Track> it = corpus.getTracks().iterator();
@@ -63,7 +61,7 @@ public class HMM {
             rootHmmFolder.mkdirs();
         }
         
-        File hmmList = new File(rootHmmFolder, "list");
+        hmmList = new File(rootHmmFolder, "list");
         if (!hmmList.exists()) {
             Iterator<String> itDictionaryEntries = dictionary.getEntries().iterator();
             while (itDictionaryEntries.hasNext()) {
@@ -111,7 +109,7 @@ public class HMM {
                 }
                 hmmFiles.put(genre, newHmmFile);
             }
-            if (!transcription.getAlignedFile().exists()) {
+            if (!corpus.getLabels().getAlignedFile().exists()) {
                 align(commandArg, hmmList, hmmFolder);
             }
         }
@@ -119,7 +117,7 @@ public class HMM {
     
     private void init(List<String> fileList, String genre, File newHmmFile, File oldHmmFile) throws ScamException {
         List<String> args = new ArrayList<String>();
-        String[] command = { Config.getInstance().getHtk() + "HCompV", "-A", "-T", "10", "-m", "-l", genre, "-o", newHmmFile.getName(), "-M", newHmmFile.getParent(), "-I", transcription.getFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
+        String[] command = { Config.getInstance().getHtk() + "HCompV", "-m", "-l", genre, "-o", newHmmFile.getName(), "-M", newHmmFile.getParent(), "-I", corpus.getLabels().getFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
         args.addAll(fileList);
         args.addAll(0, Arrays.asList(command));
     
@@ -131,7 +129,7 @@ public class HMM {
     
     private void align(List<String> fileList, File hmmListFile, File hmmFolder) throws ScamException {
         List<String> args = new ArrayList<String>();
-        String[] command = { Config.getInstance().getHtk() + "HVite", "-A", "-T", "100", "-a", "-i", transcription.getAlignedFile().getAbsolutePath(), "-m", "-I", transcription.getFile().getAbsolutePath(), "-y", "lab", "-d", hmmFolder.getAbsolutePath(), dictionary.getFile().getAbsolutePath(), hmmListFile.getAbsolutePath() };
+        String[] command = { Config.getInstance().getHtk() + "HVite", "-i", corpus.getLabels().getAlignedFile().getAbsolutePath(), "-m", "-I", corpus.getLabels().getFile().getAbsolutePath(), "-y", AudioLabler.LAB_EXTENSION, "-d", hmmFolder.getAbsolutePath(), dictionary.getFile().getAbsolutePath(), hmmListFile.getAbsolutePath() };
         args.addAll(fileList);
         args.addAll(0, Arrays.asList(command));
     
@@ -143,7 +141,7 @@ public class HMM {
     
     private void initAligned(List<String> fileList, String genre, File newHmmFile, File oldHmmFile) throws ScamException {
         List<String> args = new ArrayList<String>();
-        String[] command = { Config.getInstance().getHtk() + "HInit", "-A", "-T", "10", "-m", "1", "-l", genre, "-o", newHmmFile.getName(), "-M", newHmmFile.getParent(), "-I", transcription.getAlignedFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
+        String[] command = { Config.getInstance().getHtk() + "HInit", "-m", "1", "-l", genre, "-o", newHmmFile.getName(), "-M", newHmmFile.getParent(), "-I", corpus.getLabels().getAlignedFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
         args.addAll(fileList);
         args.addAll(0, Arrays.asList(command));
     
@@ -155,7 +153,7 @@ public class HMM {
     
     private void refine(List<String> fileList, String genre, File newHmmFile, File oldHmmFile) throws ScamException {
         List<String> args = new ArrayList<String>();        
-        String[] command = { Config.getInstance().getHtk() + "HRest", "-A", "-T", "10", "-m", "1", "-l", genre, "-M", newHmmFile.getParent(), "-I", transcription.getAlignedFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
+        String[] command = { Config.getInstance().getHtk() + "HRest", "-m", "1", "-l", genre, "-M", newHmmFile.getParent(), "-I", corpus.getLabels().getAlignedFile().getAbsolutePath(), oldHmmFile.getAbsolutePath() };
         args.addAll(fileList);
         args.addAll(0, Arrays.asList(command));
     
@@ -167,7 +165,7 @@ public class HMM {
     
     private void refineAll(List<String> fileList, File hmmListFile, File newHmmFile, File oldHmmFolder) throws ScamException {
         List<String> args = new ArrayList<String>();        
-        String[] command = { Config.getInstance().getHtk() + "HERest", "-A", "-T", "10", "-M", newHmmFile.getParent(), "-I", transcription.getAlignedFile().getAbsolutePath(), "-d", oldHmmFolder.getParent(), "-o", "wtf", hmmListFile.getAbsolutePath() };
+        String[] command = { Config.getInstance().getHtk() + "HERest", "-M", newHmmFile.getParent(), "-I", corpus.getLabels().getAlignedFile().getAbsolutePath(), "-d", oldHmmFolder.getParent(), "-o", "wtf", hmmListFile.getAbsolutePath() };
         args.addAll(fileList);
         args.addAll(0, Arrays.asList(command));
     

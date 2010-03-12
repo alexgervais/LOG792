@@ -18,8 +18,9 @@ public class AudioLabler {
     
     private final static Logger logger = Logger.getLogger(AudioLabler.class);
     
-    private final String MLF_HEADER = "#!MLF!#";
-    private final String LAB_EXTENSION = ".lab";
+    public static final String MLF_HEADER = "#!MLF!#";
+    public static final String MLF_SEPARATOR = ".";
+    public static final String LAB_EXTENSION = "lab";
 
     private Corpus corpus;
     
@@ -28,8 +29,6 @@ public class AudioLabler {
     }
     
     public Transcription build() {
-        
-        
         try {
             File mlfFile = new File(Config.getInstance().getTranscriptionFolder(), corpus.getName() + ".mlf");
             Map<String, String> entries = new HashMap<String, String>();
@@ -45,9 +44,9 @@ public class AudioLabler {
                 while (itCorpus.hasNext()) {
                     Track track = itCorpus.next();
                     entries.put(track.getOriginalFile().getName(), track.getAcutalGenre().getLabel());
-                    bufferedWriter.write("\"*/" + track.getNormalizedAudioFile().getName() + LAB_EXTENSION + "\"\n");
+                    bufferedWriter.write("\"*/" + track.getNormalizedAudioFile().getName() + "." + LAB_EXTENSION + "\"\n");
                     bufferedWriter.write(track.getAcutalGenre().getLabel() + "\n");
-                    bufferedWriter.write(".\n");
+                    bufferedWriter.write(MLF_SEPARATOR + "\n");
                 }
                 bufferedWriter.close();
                 writer.close();

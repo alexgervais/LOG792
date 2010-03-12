@@ -7,6 +7,7 @@ public class Dictionary {
 
     private List<String> entries;
     private File dictionaryFile;
+    private File wordNetworkFile;
     
     protected Dictionary() {
         
@@ -14,6 +15,10 @@ public class Dictionary {
     
     public File getFile() {
         return dictionaryFile;
+    }
+    
+    public File getWordNetworkFile() {
+        return wordNetworkFile;
     }
     
     public List<String> getEntries() {
@@ -26,6 +31,10 @@ public class Dictionary {
 
     protected void setFile(File file) {
         this.dictionaryFile = file;
+    }
+    
+    protected void setWordNetworkFile(File file) {
+        this.wordNetworkFile = file;
     }
     
 }

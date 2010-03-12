@@ -26,7 +26,7 @@ public class FeatureExtractor {
             if (!Config.getInstance().getMfccRawFolder().exists()) {
                 Config.getInstance().getMfccRawFolder().mkdirs();
             }
-            String[] command = { Config.getInstance().getHtk() + "HCopy", "-C", Config.getInstance().getHtkConfiguration(), audio.getAbsolutePath(), rawMFCC.getAbsolutePath() };
+            String[] command = { Config.getInstance().getHtk() + "HCopy", "-C", Config.getInstance().getHtkConfiguration().getAbsolutePath(), audio.getAbsolutePath(), rawMFCC.getAbsolutePath() };
             Command c = new CommandImpl(command);
             if (c.execute() != 0) {
                 throw new ScamException("Error extracting raw MFCC...");
