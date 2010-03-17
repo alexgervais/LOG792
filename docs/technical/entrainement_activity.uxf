@@ -20,24 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.activity.ActivityDiagramText</type><coordinates><x>0</x><y>0</y><w>516</w><h>669</h></coordinates><panel_attributes>title:Entrainement
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.activity.ActivityDiagramText</type><coordinates><x>10</x><y>10</y><w>527</w><h>780</h></coordinates><panel_attributes>title:Entrainement
 Start
      Chargement du\corpus d'entrainement
 Fork
-	Création du dictionnaire\   des styles musicaux
-	Création des prototypes HMM
-
 	 Extraction des\caractéristiques
+
+	Création du dictionnaire\   des styles musicaux
+	Création de la grammaire\ associée au dictionnaire
 
 	Création des\transcriptions
 Sync
+Création des prototypes HMM
+
 Initialisation des\prototypes HMM
+Réalignement des transcriptions
 While[Il n'y a pas de\convergence du model]
 	Ré-entrainement
 [Convergence du modèle]
 End
 
-</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Note</type><coordinates><x>540</x><y>160</y><w>330</w><h>140</h></coordinates><panel_attributes>Input : 
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Note</type><coordinates><x>550</x><y>170</y><w>330</w><h>140</h></coordinates><panel_attributes>Input : 
     - Corpus de données d'entrainement
        XML descriptif et fichiers audio
  

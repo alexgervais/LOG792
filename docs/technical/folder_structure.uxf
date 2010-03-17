@@ -20,28 +20,40 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.custom.PackageAggregationHierarchy</type><coordinates><x>10</x><y>10</y><w>370</w><h>820</h></coordinates><panel_attributes>corpus
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.custom.PackageAggregationHierarchy</type><coordinates><x>10</x><y>10</y><w>370</w><h>890</h></coordinates><panel_attributes>work
+	audio
+		audio_files.mp3.wav [1..*]
+	mfcc
+		raw
+			audio_files.mfc [1..*]
+		text
+			audio_files.mfcc [1..*]
+		HTK.conf [1]
+	hmm
+		0
+			genre [1..*]
+		1
+			genre [1..*]
+		2
+			genre [1..*]
+		3
+			corpus [1]
+		list [1]
+		prototype [1]
+		corpus.results [1]
+	dictionary
+		corpus.dict [1]
+		corpus.grammar [1]
+		corpus.wdnet [1]
+	transcriptions
+		corpus.mlf [1]
+		aligned.corpus.mlf [1]</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.custom.PackageAggregationHierarchy</type><coordinates><x>410</x><y>10</y><w>370</w><h>330</h></coordinates><panel_attributes>corpus
 	training
 		corpus.xml [1]
 		audio_files.mp3 [1..*]
 	test
 		corpus.xml [1]
 		audio_files.mp3 [1..*]
-work
-	mfcc
-		raw
-			audio_files.mfc [1..*]
-		text
-			audio_files.mfcc [1..*]
-	hmm
-		prototype.hmm
-		hmmX.hmm [ X = 0..10 ]
-	dictionary
-		dict.txt
-		ditc.dict
-	transcriptions
-		training_data.mlf
-		test_data.lab [1..*]
 log
 	out.log [1]
 	error.log [1]</panel_attributes><additional_attributes/></element></umlet_diagram>

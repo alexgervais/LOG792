@@ -20,22 +20,29 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.activity.ActivityDiagramText</type><coordinates><x>0</x><y>0</y><w>535</w><h>558</h></coordinates><panel_attributes>title:Reconnaissance
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.activity.ActivityDiagramText</type><coordinates><x>10</x><y>10</y><w>672</w><h>852</h></coordinates><panel_attributes>title:Reconnaissance
 Start
 Fork
-	Chargement du\ corpus de test
-	
+	Chargement du dictionnaire\      des styles musicaux
+
 	Chargement du\  modèle HMM
 
-	Chargement du dictionnaire\      des styles musicaux
+	Chargement du\ corpus de test
+	While[Autre fichier\audio à évaluer]
+		 Extraction des\caractéristiques
 Sync
+
 While[Autre fichier\audio à évaluer]
-	 Extraction des\caractéristiques
-	Évaluation
+	Fork
+		 Évaluation\expert HMM
+
+		     Évaluation\(autres experts)
+	Sync
+	Compilation des résultats
 [Tout les fichiers audio\ont étés évalués]
 End
 
-</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Note</type><coordinates><x>570</x><y>130</y><w>330</w><h>160</h></coordinates><panel_attributes>Input : 
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Note</type><coordinates><x>710</x><y>120</y><w>330</w><h>160</h></coordinates><panel_attributes>Input : 
     - Corpus de données de test
        XML descriptif et fichiers audio
     - Modèle HMM entrainé
