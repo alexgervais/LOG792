@@ -1,0 +1,16 @@
+
++++ CONFIGURATION +++
+
+	MFCC: MFCC
+	NUM-CEPS: 12
+	NUM-MIXTURES: 1
+	HIERARCHY-LEVEL: 1
+	MULTIPLE-HMM-RESULTS: false
+	HMM-DUPLE: true
+	HMM-TRIPLE: true
+	HMM-QUADRUPLE: true
+
+--- CONFIGURATION ---
+
+  ERROR [+2127]  UpMeans: zero occ i=4/s=1/m=1
+ FATAL ERROR - Terminating program HInit

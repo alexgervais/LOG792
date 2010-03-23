@@ -1,0 +1,81 @@
+
++++ CONFIGURATION +++
+
+	MFCC: MFCC
+	NUM-CEPS: 12
+	NUM-MIXTURES: 1
+	HIERARCHY-LEVEL: 1
+	MULTIPLE-HMM-RESULTS: true
+	HMM-DUPLE: false
+	HMM-TRIPLE: true
+	HMM-QUADRUPLE: true
+
+--- CONFIGURATION ---
+
+
++++ RESULTS [test] +++
+
+	test0BDF.mp3 [JAZZ] ==> [CLASSIC]
+	test16R0.mp3 [JAZZ] ==> [CLASSIC]
+	test1YET.mp3 [HIPHOP] ==> [CLASSIC]
+	test2EGI.mp3 [GOTHICINDUSTRIAL] ==> [COUNTRY]
+	test2USO.mp3 [CLASSIC] ==> [CLASSIC]
+	test325V.mp3 [DANSE] ==> [COUNTRY]
+	test49U3.mp3 [GOTHICINDUSTRIAL] ==> [CLASSIC]
+	test5LK3.mp3 [ROCK] ==> [DANSE]
+	testAECK.mp3 [HIPHOP] ==> [CLASSIC]
+	testAXZD.mp3 [COUNTRY] ==> [COUNTRY]
+	testCAQ5.mp3 [ROCK] ==> [CLASSIC]
+	testCU4Z.mp3 [GOTHICINDUSTRIAL] ==> [COUNTRY]
+	testDW3Z.mp3 [ROCK] ==> [CLASSIC]
+	testFF66.mp3 [COUNTRY] ==> [CLASSIC]
+	testFRHK.mp3 [CLASSIC] ==> [CLASSIC]
+	testHAW2.mp3 [DANSE] ==> [CLASSIC]
+	testHGJ9.mp3 [GOTHICINDUSTRIAL] ==> [COUNTRY]
+	testHU8L.mp3 [DANSE] ==> [COUNTRY]
+	testJ6JN.mp3 [JAZZ] ==> [CLASSIC]
+	testJQM6.mp3 [HIPHOP] ==> [DANSE]
+	testL1XI.mp3 [JAZZ] ==> [CLASSIC]
+	testMWBC.mp3 [HIPHOP] ==> [COUNTRY]
+	testOZ24.mp3 [COUNTRY] ==> [CLASSIC]
+	testQ2TW.mp3 [ROCK] ==> [COUNTRY]
+	testQVGP.mp3 [DANSE] ==> [CLASSIC]
+	testTM7E.mp3 [JAZZ] ==> [CLASSIC]
+	testU9IS.mp3 [CLASSIC] ==> [CLASSIC]
+	testV5WM.mp3 [COUNTRY] ==> [CLASSIC]
+	testVPY5.mp3 [SAMBA] ==> [CLASSIC]
+	testX0AH.mp3 [COUNTRY] ==> [CLASSIC]
+	testX8NE.mp3 [ROCK] ==> [CLASSIC]
+	testYVN2.mp3 [SAMBA] ==> [CLASSIC]
+
+--- RESULTS [test] ---
+
+
++++ STATISTICS [test] +++
+
+	Track count : 32
+	Correctly classified: 4
+	Incorrectly classified: 28
+	Classification error: 87.5 %
+	Classification rate: 12.5 %
+
+--- STATISTICS [test] ---
+
+
++++ CONFUSION MATRIX [test] +++
+
+		| Actual Values
+		| CLASS | COUNT | DANSE | GOTHI | HIPHO | JAZZ  | ROCK  | SAMBA 
+	------------------------------------------------------------------------
+	 CLASSI	| 3     | 4     | 2     | 1     | 2     | 5     | 3     | 2     
+	 COUNTR	| 0     | 1     | 2     | 3     | 1     | 0     | 1     | 0     
+	 DANSE 	| 0     | 0     | 0     | 0     | 1     | 0     | 1     | 0     
+	 GOTHIC	| 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	 HIPHOP	| 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	 JAZZ  	| 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	 ROCK  	| 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	 SAMBA 	| 0     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	------------------------------------------------------------------------
+
+--- CONFUSION MATRIX [test] ---
+
