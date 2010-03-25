@@ -128,7 +128,7 @@ public class Main {
             Iterator<String> entries = trainor.getDictionary().getEntries().iterator();
             while (entries.hasNext()) {
                 Genre subGenre = new Genre(entries.next());
-                Corpus subCorpus = trainCorpus.getCorpusByGenre(subGenre);
+                Corpus subCorpus = testCorpus.getCorpusByGenre(subGenre);
                 if (subCorpus.getTracks().size() > 0) {
                     evaluate(subCorpus, trainCorpus.getCorpusByGenre(subGenre), trainors, level + 1);
                 }

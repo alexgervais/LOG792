@@ -12,24 +12,6 @@
 
 --- CONFIGURATION ---
 
-Pruning-Off
-Pruning-Off
- WARNING [-2331]  UpdateModels: BLUES[2] copied: only 2 egs
- in HERest
- WARNING [-2331]  UpdateModels: TEXAS[3] copied: only 2 egs
- in HERest
-Pruning-Off
-Pruning-Off
-Pruning-Off
- WARNING [-2331]  UpdateModels: ACID[1] copied: only 2 egs
- in HERest
- WARNING [-2331]  UpdateModels: BLUES[2] copied: only 2 egs
- in HERest
-Pruning-Off
- WARNING [-2331]  UpdateModels: ALTERNATIVE[1] copied: only 2 egs
- in HERest
- WARNING [-2331]  UpdateModels: HARD[2] copied: only 2 egs
- in HERest
 
 +++ RESULTS [test] +++
 
@@ -98,194 +80,171 @@ Pruning-Off
 --- CONFUSION MATRIX [test] ---
 
 
-+++ RESULTS [train.COUNTRY] +++
++++ RESULTS [test.COUNTRY] +++
 
-	trai1I2O.mp3 [ROCK] ==> [ROCK]
-	trai1N3G.mp3 [TEXAS] ==> [TEXAS]
-	traiMK0P.mp3 [BLUES] ==> [BLUES]
-	traiOGEA.mp3 [TEXAS] ==> [TEXAS]
-	traiR257.mp3 [ROCK] ==> [ROCK]
-	traiTYJ1.mp3 [ROCK] ==> [ROCK]
-	traiW0Y6.mp3 [BLUES] ==> [BLUES]
+	testAXZD.mp3 [ROCK] ==> [ROCK]
+	testFF66.mp3 [ROCK] ==> [ROCK]
+	testV5WM.mp3 [BLUES] ==> [BLUES]
+	testX0AH.mp3 [TEXAS] ==> [TEXAS]
 
---- RESULTS [train.COUNTRY] ---
+--- RESULTS [test.COUNTRY] ---
 
 
-+++ STATISTICS [train.COUNTRY] +++
++++ STATISTICS [test.COUNTRY] +++
 
-	Track count : 7
-	Correctly classified: 7
+	Track count : 4
+	Correctly classified: 4
 	Incorrectly classified: 0
 	Classification error: 0.0 %
 	Classification rate: 100.0 %
 
---- STATISTICS [train.COUNTRY] ---
+--- STATISTICS [test.COUNTRY] ---
 
 
-+++ CONFUSION MATRIX [train.COUNTRY] +++
++++ CONFUSION MATRIX [test.COUNTRY] +++
 
 		| Actual Values
 		| BLUES | ROCK  | TEXAS 
 	--------------------------------
-	 BLUES 	| 2     | 0     | 0     
-	 ROCK  	| 0     | 3     | 0     
-	 TEXAS 	| 0     | 0     | 2     
+	 BLUES 	| 1     | 0     | 0     
+	 ROCK  	| 0     | 2     | 0     
+	 TEXAS 	| 0     | 0     | 1     
 	--------------------------------
 
---- CONFUSION MATRIX [train.COUNTRY] ---
+--- CONFUSION MATRIX [test.COUNTRY] ---
 
 
-+++ RESULTS [train.DANSE] +++
++++ RESULTS [test.DANSE] +++
 
-	trai31H6.mp3 [TECHNO] ==> [TECHNO]
-	trai5XVR.mp3 [POP] ==> [POP]
-	trai6CL4.mp3 [POP] ==> [POP]
-	traiBYQ4.mp3 [FUNK] ==> [FUNK]
-	traiDHFN.mp3 [TECHNO] ==> [TECHNO]
-	traiI3KW.mp3 [POP] ==> [POP]
-	traiP7RC.mp3 [FUNK] ==> [FUNK]
-	traiWWNN.mp3 [POP] ==> [POP]
-	traiYR18.mp3 [FUNK] ==> [FUNK]
-	traiYZEF.mp3 [TECHNO] ==> [TECHNO]
+	test325V.mp3 [POP] ==> [TECHNO]
+	testHAW2.mp3 [POP] ==> [POP]
+	testHU8L.mp3 [FUNK] ==> [TECHNO]
+	testQVGP.mp3 [TECHNO] ==> [TECHNO]
 
---- RESULTS [train.DANSE] ---
+--- RESULTS [test.DANSE] ---
 
 
-+++ STATISTICS [train.DANSE] +++
++++ STATISTICS [test.DANSE] +++
 
-	Track count : 10
-	Correctly classified: 10
-	Incorrectly classified: 0
-	Classification error: 0.0 %
-	Classification rate: 100.0 %
+	Track count : 4
+	Correctly classified: 2
+	Incorrectly classified: 2
+	Classification error: 50.0 %
+	Classification rate: 50.0 %
 
---- STATISTICS [train.DANSE] ---
+--- STATISTICS [test.DANSE] ---
 
 
-+++ CONFUSION MATRIX [train.DANSE] +++
++++ CONFUSION MATRIX [test.DANSE] +++
 
 		| Actual Values
 		| FUNK  | POP   | TECHN 
 	--------------------------------
-	 FUNK  	| 3     | 0     | 0     
-	 POP   	| 0     | 4     | 0     
-	 TECHNO	| 0     | 0     | 3     
+	 FUNK  	| 0     | 0     | 0     
+	 POP   	| 0     | 1     | 0     
+	 TECHNO	| 1     | 1     | 1     
 	--------------------------------
 
---- CONFUSION MATRIX [train.DANSE] ---
+--- CONFUSION MATRIX [test.DANSE] ---
 
 
-+++ RESULTS [train.HIPHOP] +++
++++ RESULTS [test.HIPHOP] +++
 
-	trai3LTP.mp3 [R&B] ==> [R&B]
-	trai6S9L.mp3 [R&B] ==> [R&B]
-	trai9VZD.mp3 [BEATS] ==> [BEATS]
-	traiAQN7.mp3 [BEATS] ==> [BEATS]
-	traiIBXU.mp3 [BEATS] ==> [BEATS]
-	traiLUCC.mp3 [R&B] ==> [R&B]
-	traiNX34.mp3 [BEATS] ==> [BEATS]
-	traiV19T.mp3 [R&B] ==> [R&B]
+	test1YET.mp3 [R&B] ==> [R&B]
+	testAECK.mp3 [R&B] ==> [BEATS]
+	testJQM6.mp3 [BEATS] ==> [R&B]
+	testMWBC.mp3 [BEATS] ==> [R&B]
 
---- RESULTS [train.HIPHOP] ---
+--- RESULTS [test.HIPHOP] ---
 
 
-+++ STATISTICS [train.HIPHOP] +++
++++ STATISTICS [test.HIPHOP] +++
 
-	Track count : 8
-	Correctly classified: 8
-	Incorrectly classified: 0
-	Classification error: 0.0 %
-	Classification rate: 100.0 %
+	Track count : 4
+	Correctly classified: 1
+	Incorrectly classified: 3
+	Classification error: 75.0 %
+	Classification rate: 25.0 %
 
---- STATISTICS [train.HIPHOP] ---
+--- STATISTICS [test.HIPHOP] ---
 
 
-+++ CONFUSION MATRIX [train.HIPHOP] +++
++++ CONFUSION MATRIX [test.HIPHOP] +++
 
 		| Actual Values
 		| BEATS | R&B   
 	------------------------
-	 BEATS 	| 4     | 0     
-	 R&B   	| 0     | 4     
+	 BEATS 	| 0     | 1     
+	 R&B   	| 2     | 1     
 	------------------------
 
---- CONFUSION MATRIX [train.HIPHOP] ---
+--- CONFUSION MATRIX [test.HIPHOP] ---
 
 
-+++ RESULTS [train.JAZZ] +++
++++ RESULTS [test.JAZZ] +++
 
-	trai0Z2S.mp3 [FUNK] ==> [FUNK]
-	trai8C9H.mp3 [BLUES] ==> [BLUES]
-	traiER5J.mp3 [CLASSIC] ==> [CLASSIC]
-	traiF7T0.mp3 [CLASSIC] ==> [CLASSIC]
-	traiGNJ4.mp3 [CLASSIC] ==> [CLASSIC]
-	traiJU89.mp3 [BLUES] ==> [BLUES]
-	traiLXZ1.mp3 [FUNK] ==> [FUNK]
-	traiNSDM.mp3 [FUNK] ==> [FUNK]
-	traiYWBR.mp3 [ACID] ==> [ACID]
-	traiZRPL.mp3 [ACID] ==> [ACID]
+	test0BDF.mp3 [FUNK] ==> [CLASSIC]
+	test16R0.mp3 [CLASSIC] ==> [BLUES]
+	testJ6JN.mp3 [ACID] ==> [FUNK]
+	testTM7E.mp3 [BLUES] ==> [CLASSIC]
 
---- RESULTS [train.JAZZ] ---
+--- RESULTS [test.JAZZ] ---
 
 
-+++ STATISTICS [train.JAZZ] +++
++++ STATISTICS [test.JAZZ] +++
 
-	Track count : 10
-	Correctly classified: 10
-	Incorrectly classified: 0
-	Classification error: 0.0 %
-	Classification rate: 100.0 %
+	Track count : 4
+	Correctly classified: 0
+	Incorrectly classified: 4
+	Classification error: 100.0 %
+	Classification rate: 0.0 %
 
---- STATISTICS [train.JAZZ] ---
+--- STATISTICS [test.JAZZ] ---
 
 
-+++ CONFUSION MATRIX [train.JAZZ] +++
++++ CONFUSION MATRIX [test.JAZZ] +++
 
 		| Actual Values
 		| ACID  | BLUES | CLASS | FUNK  
 	----------------------------------------
-	 ACID  	| 2     | 0     | 0     | 0     
-	 BLUES 	| 0     | 2     | 0     | 0     
-	 CLASSI	| 0     | 0     | 3     | 0     
-	 FUNK  	| 0     | 0     | 0     | 3     
+	 ACID  	| 0     | 0     | 0     | 0     
+	 BLUES 	| 0     | 0     | 1     | 0     
+	 CLASSI	| 0     | 1     | 0     | 1     
+	 FUNK  	| 1     | 0     | 0     | 0     
 	----------------------------------------
 
---- CONFUSION MATRIX [train.JAZZ] ---
+--- CONFUSION MATRIX [test.JAZZ] ---
 
 
-+++ RESULTS [train.ROCK] +++
++++ RESULTS [test.ROCK] +++
 
-	traiALOQ.mp3 [HARD] ==> [HARD]
-	traiCH2K.mp3 [HARD] ==> [HARD]
-	traiD6SO.mp3 [ALTERNATIVE] ==> [ALTERNATIVE]
-	traiK1L7.mp3 [PUNK] ==> [PUNK]
-	traiPNRG.mp3 [ALTERNATIVE] ==> [ALTERNATIVE]
-	traiSMV3.mp3 [PUNK] ==> [PUNK]
-	traiWTLZ.mp3 [PUNK] ==> [PUNK]
+	testCAQ5.mp3 [HARD] ==> [PUNK]
+	testDW3Z.mp3 [ALTERNATIVE] ==> [PUNK]
+	testX8NE.mp3 [PUNK] ==> [HARD]
 
---- RESULTS [train.ROCK] ---
+--- RESULTS [test.ROCK] ---
 
 
-+++ STATISTICS [train.ROCK] +++
++++ STATISTICS [test.ROCK] +++
 
-	Track count : 7
-	Correctly classified: 7
-	Incorrectly classified: 0
-	Classification error: 0.0 %
-	Classification rate: 100.0 %
+	Track count : 3
+	Correctly classified: 0
+	Incorrectly classified: 3
+	Classification error: 100.0 %
+	Classification rate: 0.0 %
 
---- STATISTICS [train.ROCK] ---
+--- STATISTICS [test.ROCK] ---
 
 
-+++ CONFUSION MATRIX [train.ROCK] +++
++++ CONFUSION MATRIX [test.ROCK] +++
 
 		| Actual Values
 		| ALTER | HARD  | PUNK  
 	--------------------------------
-	 ALTERN	| 2     | 0     | 0     
-	 HARD  	| 0     | 2     | 0     
-	 PUNK  	| 0     | 0     | 3     
+	 ALTERN	| 0     | 0     | 0     
+	 HARD  	| 0     | 0     | 1     
+	 PUNK  	| 1     | 1     | 0     
 	--------------------------------
 
---- CONFUSION MATRIX [train.ROCK] ---
+--- CONFUSION MATRIX [test.ROCK] ---
 
