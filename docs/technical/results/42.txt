@@ -1,0 +1,320 @@
+
++++ CONFIGURATION +++
+
+	MFCC: MFCC_D_0_A
+	SAMPLE-SIZE: 100000
+	WINDOW-SIZE: 100000
+	NUM-CEPS: 12
+	NUM-MIXTURES: 6
+	HIERARCHY-LEVEL: 2
+	MULTIPLE-HMM-RESULTS: false
+	HMM-SINGLE: true
+	HMM-DUPLE: false
+	HMM-TRIPLE: false
+	HMM-QUADRUPLE: false
+
+--- CONFIGURATION ---
+
+
++++ RESULTS [test] +++
+
+	trai0APQ.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	trai0US0.mp3 [SAMBA] ==> [SAMBA]
+	trai0Z2S.mp3 [JAZZ] ==> [JAZZ]
+	trai1I2O.mp3 [COUNTRY] ==> [COUNTRY]
+	trai1N3G.mp3 [COUNTRY] ==> [COUNTRY]
+	trai31H6.mp3 [DANSE] ==> [DANSE]
+	trai3LTP.mp3 [HIPHOP] ==> [HIPHOP]
+	trai3QU7.mp3 [ROCK] ==> [SAMBA]
+	trai548X.mp3 [COUNTRY] ==> [JAZZ]
+	trai5L8S.mp3 [ROCK] ==> [DANSE]
+	trai5XVR.mp3 [DANSE] ==> [DANSE]
+	trai6CL4.mp3 [DANSE] ==> [DANSE]
+	trai6S9L.mp3 [HIPHOP] ==> [HIPHOP]
+	trai70MS.mp3 [CLASSIC] ==> [CLASSIC]
+	trai87ZP.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	trai8C9H.mp3 [JAZZ] ==> [JAZZ]
+	trai8NW6.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	trai93CK.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	trai9VZD.mp3 [HIPHOP] ==> [HIPHOP]
+	traiALOQ.mp3 [ROCK] ==> [ROCK]
+	traiAQN7.mp3 [HIPHOP] ==> [HIPHOP]
+	traiBYQ4.mp3 [DANSE] ==> [DANSE]
+	traiCH2K.mp3 [ROCK] ==> [ROCK]
+	traiCM1S.mp3 [SAMBA] ==> [SAMBA]
+	traiCOFH.mp3 [JAZZ] ==> [JAZZ]
+	traiD6SO.mp3 [ROCK] ==> [ROCK]
+	traiDA2G.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiDHFN.mp3 [DANSE] ==> [DANSE]
+	traiEPRT.mp3 [CLASSIC] ==> [CLASSIC]
+	traiER5J.mp3 [JAZZ] ==> [JAZZ]
+	traiF7T0.mp3 [JAZZ] ==> [JAZZ]
+	traiFDS8.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiFK5E.mp3 [CLASSIC] ==> [CLASSIC]
+	traiG862.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiGNJ4.mp3 [JAZZ] ==> [JAZZ]
+	traiI3KW.mp3 [DANSE] ==> [DANSE]
+	traiIBXU.mp3 [HIPHOP] ==> [HIPHOP]
+	traiIIXY.mp3 [ROCK] ==> [ROCK]
+	traiJU89.mp3 [JAZZ] ==> [JAZZ]
+	traiK1L7.mp3 [ROCK] ==> [ROCK]
+	traiL2P9.mp3 [COUNTRY] ==> [COUNTRY]
+	traiLUCC.mp3 [HIPHOP] ==> [HIPHOP]
+	traiLXZ1.mp3 [JAZZ] ==> [JAZZ]
+	traiMK0P.mp3 [COUNTRY] ==> [COUNTRY]
+	traiMQZX.mp3 [CLASSIC] ==> [CLASSIC]
+	traiNSDM.mp3 [JAZZ] ==> [JAZZ]
+	traiNX34.mp3 [HIPHOP] ==> [HIPHOP]
+	traiO5FA.mp3 [CLASSIC] ==> [GOTHICINDUSTRIAL]
+	traiOGEA.mp3 [COUNTRY] ==> [COUNTRY]
+	traiP7RC.mp3 [DANSE] ==> [DANSE]
+	traiPNRG.mp3 [ROCK] ==> [ROCK]
+	traiPTQY.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiQO4J.mp3 [SAMBA] ==> [COUNTRY]
+	traiR257.mp3 [COUNTRY] ==> [COUNTRY]
+	traiR7FP.mp3 [JAZZ] ==> [COUNTRY]
+	traiRQI8.mp3 [JAZZ] ==> [JAZZ]
+	traiSAID.mp3 [SAMBA] ==> [SAMBA]
+	traiSMV3.mp3 [ROCK] ==> [ROCK]
+	traiSRVB.mp3 [CLASSIC] ==> [CLASSIC]
+	traiT5VY.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiTYJ1.mp3 [COUNTRY] ==> [DANSE]
+	traiUM85.mp3 [COUNTRY] ==> [COUNTRY]
+	traiV19T.mp3 [HIPHOP] ==> [HIPHOP]
+	traiV8M0.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiW0Y6.mp3 [COUNTRY] ==> [COUNTRY]
+	traiWOAG.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiWTLZ.mp3 [ROCK] ==> [ROCK]
+	traiWWNN.mp3 [DANSE] ==> [DANSE]
+	traiX40K.mp3 [GOTHICINDUSTRIAL] ==> [GOTHICINDUSTRIAL]
+	traiXKY1.mp3 [SAMBA] ==> [SAMBA]
+	traiYR18.mp3 [DANSE] ==> [DANSE]
+	traiYWBR.mp3 [JAZZ] ==> [DANSE]
+	traiYZEF.mp3 [DANSE] ==> [DANSE]
+	traiZFBW.mp3 [SAMBA] ==> [JAZZ]
+	traiZNO3.mp3 [CLASSIC] ==> [CLASSIC]
+	traiZRPL.mp3 [JAZZ] ==> [DANSE]
+
+--- RESULTS [test] ---
+
+
++++ STATISTICS [test] +++
+
+	Track count : 76
+	Correctly classified: 66
+	Incorrectly classified: 10
+	Classification error: 13.157894736842104 %
+	Classification rate: 86.84210526315789 %
+
+--- STATISTICS [test] ---
+
+
++++ CONFUSION MATRIX [test] +++
+
+		| Actual Values
+		| CLASS | COUNT | DANSE | GOTHI | HIPHO | JAZZ  | ROCK  | SAMBA 
+	------------------------------------------------------------------------
+	 CLASSI	| 6     | 0     | 0     | 0     | 0     | 0     | 0     | 0     
+	 COUNTR	| 0     | 8     | 0     | 0     | 0     | 1     | 0     | 1     
+	 DANSE 	| 0     | 1     | 10    | 0     | 0     | 2     | 1     | 0     
+	 GOTHIC	| 1     | 0     | 0     | 12    | 0     | 0     | 0     | 0     
+	 HIPHOP	| 0     | 0     | 0     | 0     | 8     | 0     | 0     | 0     
+	 JAZZ  	| 0     | 1     | 0     | 0     | 0     | 10    | 0     | 1     
+	 ROCK  	| 0     | 0     | 0     | 0     | 0     | 0     | 8     | 0     
+	 SAMBA 	| 0     | 0     | 0     | 0     | 0     | 0     | 1     | 4     
+	------------------------------------------------------------------------
+
+--- CONFUSION MATRIX [test] ---
+
+
++++ RESULTS [test.COUNTRY] +++
+
+	trai1I2O.mp3 [ROCK] ==> [ROCK]
+	trai1N3G.mp3 [TEXAS] ==> [TEXAS]
+	traiMK0P.mp3 [BLUES] ==> [BLUES]
+	traiOGEA.mp3 [TEXAS] ==> [TEXAS]
+	traiR257.mp3 [ROCK] ==> [ROCK]
+	traiTYJ1.mp3 [ROCK] ==> [ROCK]
+	traiW0Y6.mp3 [BLUES] ==> [BLUES]
+
+--- RESULTS [test.COUNTRY] ---
+
+
++++ STATISTICS [test.COUNTRY] +++
+
+	Track count : 7
+	Correctly classified: 7
+	Incorrectly classified: 0
+	Classification error: 0.0 %
+	Classification rate: 100.0 %
+
+--- STATISTICS [test.COUNTRY] ---
+
+
++++ CONFUSION MATRIX [test.COUNTRY] +++
+
+		| Actual Values
+		| BLUES | ROCK  | TEXAS 
+	--------------------------------
+	 BLUES 	| 2     | 0     | 0     
+	 ROCK  	| 0     | 3     | 0     
+	 TEXAS 	| 0     | 0     | 2     
+	--------------------------------
+
+--- CONFUSION MATRIX [test.COUNTRY] ---
+
+
++++ RESULTS [test.DANSE] +++
+
+	trai31H6.mp3 [TECHNO] ==> [TECHNO]
+	trai5XVR.mp3 [POP] ==> [POP]
+	trai6CL4.mp3 [POP] ==> [POP]
+	traiBYQ4.mp3 [FUNK] ==> [FUNK]
+	traiDHFN.mp3 [TECHNO] ==> [TECHNO]
+	traiI3KW.mp3 [POP] ==> [POP]
+	traiP7RC.mp3 [FUNK] ==> [FUNK]
+	traiWWNN.mp3 [POP] ==> [POP]
+	traiYR18.mp3 [FUNK] ==> [FUNK]
+	traiYZEF.mp3 [TECHNO] ==> [TECHNO]
+
+--- RESULTS [test.DANSE] ---
+
+
++++ STATISTICS [test.DANSE] +++
+
+	Track count : 10
+	Correctly classified: 10
+	Incorrectly classified: 0
+	Classification error: 0.0 %
+	Classification rate: 100.0 %
+
+--- STATISTICS [test.DANSE] ---
+
+
++++ CONFUSION MATRIX [test.DANSE] +++
+
+		| Actual Values
+		| FUNK  | POP   | TECHN 
+	--------------------------------
+	 FUNK  	| 3     | 0     | 0     
+	 POP   	| 0     | 4     | 0     
+	 TECHNO	| 0     | 0     | 3     
+	--------------------------------
+
+--- CONFUSION MATRIX [test.DANSE] ---
+
+
++++ RESULTS [test.HIPHOP] +++
+
+	trai3LTP.mp3 [R&B] ==> [R&B]
+	trai6S9L.mp3 [R&B] ==> [R&B]
+	trai9VZD.mp3 [BEATS] ==> [BEATS]
+	traiAQN7.mp3 [BEATS] ==> [BEATS]
+	traiIBXU.mp3 [BEATS] ==> [BEATS]
+	traiLUCC.mp3 [R&B] ==> [R&B]
+	traiNX34.mp3 [BEATS] ==> [BEATS]
+	traiV19T.mp3 [R&B] ==> [R&B]
+
+--- RESULTS [test.HIPHOP] ---
+
+
++++ STATISTICS [test.HIPHOP] +++
+
+	Track count : 8
+	Correctly classified: 8
+	Incorrectly classified: 0
+	Classification error: 0.0 %
+	Classification rate: 100.0 %
+
+--- STATISTICS [test.HIPHOP] ---
+
+
++++ CONFUSION MATRIX [test.HIPHOP] +++
+
+		| Actual Values
+		| BEATS | R&B   
+	------------------------
+	 BEATS 	| 4     | 0     
+	 R&B   	| 0     | 4     
+	------------------------
+
+--- CONFUSION MATRIX [test.HIPHOP] ---
+
+
++++ RESULTS [test.JAZZ] +++
+
+	trai0Z2S.mp3 [FUNK] ==> [FUNK]
+	trai8C9H.mp3 [BLUES] ==> [BLUES]
+	traiER5J.mp3 [CLASSIC] ==> [CLASSIC]
+	traiF7T0.mp3 [CLASSIC] ==> [CLASSIC]
+	traiGNJ4.mp3 [CLASSIC] ==> [CLASSIC]
+	traiJU89.mp3 [BLUES] ==> [BLUES]
+	traiLXZ1.mp3 [FUNK] ==> [FUNK]
+	traiNSDM.mp3 [FUNK] ==> [FUNK]
+	traiYWBR.mp3 [ACID] ==> [ACID]
+	traiZRPL.mp3 [ACID] ==> [ACID]
+
+--- RESULTS [test.JAZZ] ---
+
+
++++ STATISTICS [test.JAZZ] +++
+
+	Track count : 10
+	Correctly classified: 10
+	Incorrectly classified: 0
+	Classification error: 0.0 %
+	Classification rate: 100.0 %
+
+--- STATISTICS [test.JAZZ] ---
+
+
++++ CONFUSION MATRIX [test.JAZZ] +++
+
+		| Actual Values
+		| ACID  | BLUES | CLASS | FUNK  
+	----------------------------------------
+	 ACID  	| 2     | 0     | 0     | 0     
+	 BLUES 	| 0     | 2     | 0     | 0     
+	 CLASSI	| 0     | 0     | 3     | 0     
+	 FUNK  	| 0     | 0     | 0     | 3     
+	----------------------------------------
+
+--- CONFUSION MATRIX [test.JAZZ] ---
+
+
++++ RESULTS [test.ROCK] +++
+
+	traiALOQ.mp3 [HARD] ==> [HARD]
+	traiCH2K.mp3 [HARD] ==> [HARD]
+	traiD6SO.mp3 [ALTERNATIVE] ==> [ALTERNATIVE]
+	traiK1L7.mp3 [PUNK] ==> [PUNK]
+	traiPNRG.mp3 [ALTERNATIVE] ==> [ALTERNATIVE]
+	traiSMV3.mp3 [PUNK] ==> [PUNK]
+	traiWTLZ.mp3 [PUNK] ==> [PUNK]
+
+--- RESULTS [test.ROCK] ---
+
+
++++ STATISTICS [test.ROCK] +++
+
+	Track count : 7
+	Correctly classified: 7
+	Incorrectly classified: 0
+	Classification error: 0.0 %
+	Classification rate: 100.0 %
+
+--- STATISTICS [test.ROCK] ---
+
+
++++ CONFUSION MATRIX [test.ROCK] +++
+
+		| Actual Values
+		| ALTER | HARD  | PUNK  
+	--------------------------------
+	 ALTERN	| 2     | 0     | 0     
+	 HARD  	| 0     | 2     | 0     
+	 PUNK  	| 0     | 0     | 3     
+	--------------------------------
+
+--- CONFUSION MATRIX [test.ROCK] ---
+

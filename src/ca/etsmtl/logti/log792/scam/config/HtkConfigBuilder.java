@@ -22,11 +22,11 @@ public class HtkConfigBuilder {
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             bufferedWriter.write("# Feature configuration\n" + 
                     "TARGETKIND = " + Config.getInstance().getMfccType() + "\n" + 
-                    "TARGETRATE = 100000\n" + 
+                    "TARGETRATE = " + Config.getInstance().getMfccSampleSize() + "\n" + 
                     "TARGETFORMAT = HTK\n" + 
                     "SAVECOMPRESSED = T\n" + 
                     "SAVEWITHCRC = F\n" + 
-                    "WINDOWSIZE = 100000\n" + 
+                    "WINDOWSIZE = " + Config.getInstance().getMfccWindowSize() + "\n" + 
                     "USEHAMMING = T\n" + 
                     "PREEMCOEF = 0.97\n" + 
                     "NUMCHANS = 26\n" + 

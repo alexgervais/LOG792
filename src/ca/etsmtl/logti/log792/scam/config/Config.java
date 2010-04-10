@@ -25,12 +25,15 @@ public class Config {
     private File dictionaryFolder = null;
     private File transcriptionFolder = null;
 
+    private int sampleSize;
+    private int windowSize;
     private int numceps;
     private boolean energy;
     private boolean delta;
     private boolean zero;
     private boolean acceleration;
 
+    private boolean single;
     private boolean duple;
     private boolean triple;
     private boolean quadruple;
@@ -113,6 +116,14 @@ public class Config {
         return transcriptionFolder;
     }
 
+    public int getMfccSampleSize() {
+        return sampleSize;
+    }
+    
+    public int getMfccWindowSize() {
+        return windowSize;
+    }
+    
     public int getNumceps() {
         return numceps;
     }
@@ -133,6 +144,10 @@ public class Config {
         return acceleration;
     }
 
+    public boolean isSingle() {
+        return single;
+    }
+    
     public boolean isDuple() {
         return duple;
     }
@@ -192,6 +207,9 @@ public class Config {
     
     public int getHmmStateCount() {
         int totalStates = 2;
+        if (isSingle()) {
+            totalStates += 1;
+        }
         if (isDuple()) {
             totalStates += 2;
         }
@@ -206,6 +224,9 @@ public class Config {
     
     public int getSignaturesCount() {
         int totalSignatures = 0;
+        if (isSingle()) {
+            totalSignatures++;
+        }
         if (isDuple()) {
             totalSignatures++;
         }
@@ -277,6 +298,14 @@ public class Config {
     protected void setTranscriptionFolder(File transcriptionFolder) {
         this.transcriptionFolder = transcriptionFolder;
     }
+    
+    protected void setMfccSampleSize(int sampleSize) {
+        this.sampleSize = sampleSize;
+    }
+    
+    protected void setMfccWindowSize(int windowSize) {
+        this.windowSize = windowSize;
+    }
 
     protected void setMfccNumceps(int numceps) {
         this.numceps = numceps;
@@ -302,6 +331,10 @@ public class Config {
         }
     }
 
+    protected void setHmmSingle(boolean single) {
+        this.single = single;
+    }
+    
     protected void setHmmDuple(boolean duple) {
         this.duple = duple;
     }

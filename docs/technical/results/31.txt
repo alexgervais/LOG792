@@ -1,0 +1,19 @@
+
++++ CONFIGURATION +++
+
+	MFCC: MFCC_D_0_A
+	SAMPLE-SIZE: 100000
+	WINDOW-SIZE: 100000
+	NUM-CEPS: 12
+	NUM-MIXTURES: 6
+	HIERARCHY-LEVEL: 1
+	MULTIPLE-HMM-RESULTS: false
+	HMM-SINGLE: true
+	HMM-DUPLE: false
+	HMM-TRIPLE: true
+	HMM-QUADRUPLE: false
+
+--- CONFIGURATION ---
+
+  ERROR [+2127]  UpWeights: zero occ i=2/s=1
+ FATAL ERROR - Terminating program HInit

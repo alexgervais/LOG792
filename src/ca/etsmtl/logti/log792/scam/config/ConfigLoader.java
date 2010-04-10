@@ -39,12 +39,15 @@ public class ConfigLoader {
             Config.getInstance().setSox(properties.getProperty("sox.path").trim());
             Config.getInstance().setHtk(properties.getProperty("htk.path").trim());
             
+            Config.getInstance().setMfccSampleSize(Integer.parseInt(properties.getProperty("mfcc.samplesize").trim()));
+            Config.getInstance().setMfccWindowSize(Integer.parseInt(properties.getProperty("mfcc.windowsize").trim()));
             Config.getInstance().setMfccNumceps(Integer.parseInt(properties.getProperty("mfcc.numceps").trim()));
             Config.getInstance().setMfccEnergy(Boolean.parseBoolean(properties.getProperty("mfcc.energy").trim()));
             Config.getInstance().setMfccDelta(Boolean.parseBoolean(properties.getProperty("mfcc.delta").trim()));
             Config.getInstance().setMfcc0(Boolean.parseBoolean(properties.getProperty("mfcc.0").trim()));
             Config.getInstance().setMfccAcceleration(Boolean.parseBoolean(properties.getProperty("mfcc.acceleration").trim()));
             
+            Config.getInstance().setHmmSingle(Boolean.parseBoolean(properties.getProperty("hmm.single").trim()));
             Config.getInstance().setHmmDuple(Boolean.parseBoolean(properties.getProperty("hmm.duple").trim()));
             Config.getInstance().setHmmTriple(Boolean.parseBoolean(properties.getProperty("hmm.triple").trim()));
             Config.getInstance().setHmmQuadruple(Boolean.parseBoolean(properties.getProperty("hmm.quadruple").trim()));

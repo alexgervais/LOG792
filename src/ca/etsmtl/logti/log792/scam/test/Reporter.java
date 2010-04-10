@@ -22,10 +22,13 @@ public class Reporter {
     public static void printConfig() {
         System.out.println("\n+++ CONFIGURATION +++\n");
         System.out.println("\tMFCC: " + Config.getInstance().getMfccType());
+        System.out.println("\tSAMPLE-SIZE: " + Config.getInstance().getMfccSampleSize());
+        System.out.println("\tWINDOW-SIZE: " + Config.getInstance().getMfccWindowSize());
         System.out.println("\tNUM-CEPS: " + Config.getInstance().getNumceps());
         System.out.println("\tNUM-MIXTURES: " + Config.getInstance().getMixtures());
         System.out.println("\tHIERARCHY-LEVEL: " + Config.getInstance().getHierarchyLevel());
         System.out.println("\tMULTIPLE-HMM-RESULTS: " + Config.getInstance().isHmmMultipleEvaluations());
+        System.out.println("\tHMM-SINGLE: " + Config.getInstance().isSingle());
         System.out.println("\tHMM-DUPLE: " + Config.getInstance().isDuple());
         System.out.println("\tHMM-TRIPLE: " + Config.getInstance().isTriple());
         System.out.println("\tHMM-QUADRUPLE: " + Config.getInstance().isQuadruple());

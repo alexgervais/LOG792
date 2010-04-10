@@ -69,6 +69,10 @@ public class HMMBuilder {
             double startProbability = 1.0 / Config.getInstance().getSignaturesCount();
             double endProbability = 0.05;
             int stateStartIndex = 1;
+            if (Config.getInstance().isSingle()) {
+                transitionSignature(transitions, stateStartIndex, startProbability, endProbability, stateCount, 0);
+                stateStartIndex += 1;
+            } 
             if (Config.getInstance().isDuple()) {
                 transitionSignature(transitions, stateStartIndex, startProbability, endProbability, stateCount, 1);
                 stateStartIndex += 2;
@@ -110,7 +114,11 @@ public class HMMBuilder {
                 transitions[i][i + 1] = 0.05;
             }
         }
-        transitions[i - 1][i - 1] = 0.9;
+        if (size > 0) {
+            transitions[i - 1][i - 1] = 0.9;
+        } else {
+            transitions[i - 1][i - 1] = 0.95;
+        }
         transitions[startIndex + size][stateCount - 1] = endProbability;
     }
 
